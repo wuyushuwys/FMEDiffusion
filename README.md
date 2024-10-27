@@ -8,7 +8,7 @@ Official Implementation of **NeurIPS2024** Faster and Memory-Efficient Video Dif
 > 38th Conference on Neural Information Processing Systems ([**NeurIPS 2024**](https://neurips.cc/Conferences/2024/))
 
 ---
-This repo contains simulation of **Feature Slicer (Sec.4.1)** and **_Operator Grouping (Sec.4.2)_** which can effectively reduce the memory-footprint of spatial-temporal diffusion inference.
+This repo contains simulation of **_Feature Slicer (Sec.4.1)_** and **_Operator Grouping (Sec.4.2)_** which can effectively reduce the memory-footprint of spatial-temporal diffusion inference.
 
 ---
 **coming soon.**
