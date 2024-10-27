@@ -8,8 +8,12 @@ Official Implementation of **NeurIPS2024** Faster and Memory-Efficient Video Dif
 > 38th Conference on Neural Information Processing Systems ([**NeurIPS 2024**](https://neurips.cc/Conferences/2024/))
 
 
-## Dependencies
+**coming soon.**
 
 
+[//]: # (## Dependencies)
 
-## Usage
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # (## Usage)
