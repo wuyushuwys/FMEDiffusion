@@ -1,6 +1,6 @@
-# Fast and Memory-Efficient Video Diffusion using Streamlined Inference
+# Fast and Memory-Efficient Video Diffusion Using Streamlined Inference
 
-Official Implementation of **NeurIPS2024** Fast and Memory-Efficient Video Diffusion using Streamlined Inference
+Official Implementation of **NeurIPS2024** Fast and Memory-Efficient Video Diffusion Using Streamlined Inference
 
 > **Fast and Memory-Efficient Video Diffusion using Streamlined Inference**   
 > [Zheng Zhan*](https://zhanzheng8585.github.io), [Yushu Wu*](https://scholar.google.com/citations?user=3hEDsFYAAAAJ&hl=en), [Yifan Gong](https://yifanfanfanfan.github.io/), Zichong Meng, [Zhenglun Kong](https://zlkong.github.io/homepage/), Changdi Yang, Geng Yuan, Puzhao, Wei Nui, and Yanzhi Wang  
