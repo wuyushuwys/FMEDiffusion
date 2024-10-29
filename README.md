@@ -23,6 +23,11 @@ pip install pynvml  # for memory-footprint benchmark
 pip install .
 ```
 
+## Supported Pipeline
+
+-[x] Stable Video Diffusion
+-[ ] AnimateDiff 
+
 ## Usage
 
 ```python
