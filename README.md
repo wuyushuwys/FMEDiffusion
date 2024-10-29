@@ -25,8 +25,8 @@ pip install .
 
 ## Supported Pipeline
 
--[x] Stable Video Diffusion
--[ ] AnimateDiff 
+- [x] Stable Video Diffusion
+- [ ] AnimateDiff 
 
 ## Usage
 
