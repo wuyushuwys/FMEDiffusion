@@ -1,10 +1,11 @@
 import logging
+import time
 
 import torch
 from pynvml import nvmlInit, nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo
 
 from diffusers import StableVideoDiffusionPipeline
-from diffusers.utils import load_image, export_to_video
+from diffusers.utils import load_image, export_to_gif
 
 from fme import FMEWrapper
 
@@ -33,9 +34,10 @@ image = image.resize((1024, 576))
 
 generator = torch.manual_seed(42)
 frames = pipe(image, generator=generator).frames[0]
+time.sleep(2)
 
 info = nvmlDeviceGetMemoryInfo(handle)
 used = info.used
 logging.info(f'[PyNVML]Peak Memory is: {used / (1024 ** 3):.02f}G')
 
-export_to_video(frames, "generated_fme.mp4", fps=7)
+export_to_gif(frames, "generated_fme.gif", fps=7)

@@ -4,7 +4,7 @@ import torch
 from pynvml import nvmlInit, nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo
 
 from diffusers import StableVideoDiffusionPipeline
-from diffusers.utils import load_image, export_to_video
+from diffusers.utils import load_image, export_to_gif
 
 logging.basicConfig(level=logging.INFO)
 
@@ -33,4 +33,4 @@ info = nvmlDeviceGetMemoryInfo(handle)
 used = info.used
 logging.info(f'[PyNVML]Peak Memory is: {used / (1024 ** 3):.02f}G')
 
-export_to_video(frames, "generated.mp4", fps=7)
+export_to_gif(frames, "generated.gif", fps=7)

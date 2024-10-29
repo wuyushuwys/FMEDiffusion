@@ -10,7 +10,7 @@ round_func = math.ceil
 
 class MemoryEfficientMixin:
     _num_chunk = None
-    _spatial_slicing = False
+    _spatial_slicing = True
     _num_spatial_chunk = None
     _pbar_kwargs = dict(
         disable=True,

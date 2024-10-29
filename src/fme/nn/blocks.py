@@ -75,7 +75,7 @@ class FMETemporalBasicTransformerBlock(MemoryEfficientMixin, TemporalBasicTransf
         hidden_states = hidden_states.permute(0, 2, 1, 3)
         hidden_states = hidden_states.reshape(batch_size * seq_length, num_frames, channels)
 
-        chunk_size = max(round_func(hidden_states.size(0) / self.num_chunk), 1)
+        chunk_size = max(round_func(hidden_states.size(0) / self.num_spatial_chunk), 1)
         chunk_hidden_states_cache = []
         for i in range(0, hidden_states.size(0), chunk_size):
             chunk_residual = hidden_states[i:i + chunk_size].cuda()
