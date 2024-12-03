@@ -15,7 +15,7 @@ Official Implementation of **NeurIPS2024** [Fast and Memory-Efficient Video Diff
 This repo contains simulation of **_Feature Slicer (Sec.4.1)_** and **_Operator Grouping (Sec.4.2)_** which can
 effectively reduce the memory-footprint of spatial-temporal model in inference.
 
-#### Tested Devices
+### Tested Devices
 - `NVIDIA A100-SXM4-80GB`
 - `NVIDIA A100-PCIE-40GB`
 - `NVIDIA A6000`
