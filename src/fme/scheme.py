@@ -1,3 +1,16 @@
+import diffusers
+
+from diffusers.utils import check_min_version
+
+# AnimateDiff
+check_min_version("0.30.1")
+from diffusers.models.unets.unet_motion_model import (CrossAttnDownBlockMotion, DownBlockMotion,
+                                                      CrossAttnUpBlockMotion, UpBlockMotion,
+                                                      UNetMidBlockCrossAttnMotion)
+
+from .nn.unet_blocks import (FMECrossAttnDownBlockMotion, FMEDownBlockMotion,
+                             FMECrossAttnUpBlockMotion, FMEUpBlockMotion,
+                             FMEUNetMidBlockCrossAttnMotion)
 # stable-video diffusion
 from diffusers.models.resnet import SpatioTemporalResBlock
 from diffusers.models.transformers.transformer_temporal import TransformerSpatioTemporalModel
@@ -17,10 +30,17 @@ from .nn.unet_blocks import (FMEDownBlockSpatioTemporal,
                              FMEUpBlockSpatioTemporal,
                              FMECrossAttnUpBlockSpatioTemporal)
 
-__all__ = ["StableVideoDiffusionScheme", ]
+__all__ = ["AnimateDiffScheme", "StableVideoDiffusionScheme", ]
+
 # animatediff scheme
 
-# todo: animatediff
+AnimateDiffScheme = {
+    CrossAttnDownBlockMotion: FMECrossAttnDownBlockMotion,
+    DownBlockMotion: FMEDownBlockMotion,
+    CrossAttnUpBlockMotion: FMECrossAttnUpBlockMotion,
+    UpBlockMotion: FMEUpBlockMotion,
+    UNetMidBlockCrossAttnMotion: FMEUNetMidBlockCrossAttnMotion
+}
 
 # stable-video diffusion scheme
 StableVideoDiffusionScheme = {

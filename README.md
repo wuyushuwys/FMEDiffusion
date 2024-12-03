@@ -15,21 +15,34 @@ Official Implementation of **NeurIPS2024** [Fast and Memory-Efficient Video Diff
 This repo contains simulation of **_Feature Slicer (Sec.4.1)_** and **_Operator Grouping (Sec.4.2)_** which can
 effectively reduce the memory-footprint of spatial-temporal model in inference.
 
-## Dependencies
+#### Tested Devices
+- `NVIDIA A100-SXM4-80GB`
+- `NVIDIA A100-PCIE-40GB`
+- `NVIDIA A6000`
 
+### Supported Pipeline
+
+- [x] Stable Video Diffusion
+- [x] AnimateDiff 
+
+## Quick Start
+
+----
+
+### Install
 ```bash
+git clone https://github.com/wuyushuwys/FMEDiffusion
+cd FMEDiffusion
+# if you use conda
+conda create -n fme python=3.10 -y
+conda activate fme
+
 pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu121
 pip install pynvml  # for memory-footprint benchmark
 pip install .
 ```
 
-## Supported Pipeline
-
-- [x] Stable Video Diffusion
-- [ ] AnimateDiff 
-
-## Usage
-
+### Usage
 ```python
 import torch
 from diffusers import StableVideoDiffusionPipeline
