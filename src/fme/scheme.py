@@ -1,7 +1,4 @@
-import diffusers
-
 from diffusers.utils import check_min_version
-
 # AnimateDiff
 check_min_version("0.30.1")
 from diffusers.models.unets.unet_motion_model import (CrossAttnDownBlockMotion, DownBlockMotion,

@@ -1,5 +1,4 @@
 import logging
-from tabnanny import verbose
 from typing import Union
 
 from diffusers.pipelines.stable_video_diffusion import StableVideoDiffusionPipeline
@@ -30,7 +29,7 @@ class FMEWrapper:
             for n, m in pipe.unet.named_modules():
                 if isinstance(m, tuple(AnimateDiffScheme.keys())):
                     if self.verbose:
-                        logging.info(f"{m.__class__.__name__} --> {AnimateDiffScheme[m.__class__.__name__]}")
+                        logging.info(f"{m.__class__.__name__} --> {AnimateDiffScheme[m.__class__].__name__}")
                     m.__class__ = AnimateDiffScheme[m.__class__]
                     self._assign_property(m)
             pipe.vae.use_slicing = True
@@ -40,13 +39,13 @@ class FMEWrapper:
             for n, m in pipe.unet.named_modules():
                 if isinstance(m, tuple(StableVideoDiffusionScheme.keys())):
                     if self.verbose:
-                        logging.info(f"{m.__class__.__name__} --> {StableVideoDiffusionScheme[m.__class__.__name__]}")
+                        logging.info(f"{m.__class__.__name__} --> {StableVideoDiffusionScheme[m.__class__].__name__}")
                     m.__class__ = StableVideoDiffusionScheme[m.__class__]
                     self._assign_property(m)
             for n, m in pipe.vae.named_modules():
                 if isinstance(m, tuple(StableVideoDiffusionScheme.keys())):
                     if self.verbose:
-                        logging.info(f"{m.__class__.__name__} --> {StableVideoDiffusionScheme[m.__class__.__name__]}")
+                        logging.info(f"{m.__class__.__name__} --> {StableVideoDiffusionScheme[m.__class__].__name__}")
                     m.__class__ = StableVideoDiffusionScheme[m.__class__]
                     self._assign_property(m)
         else:
